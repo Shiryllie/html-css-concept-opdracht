@@ -28,7 +28,7 @@
     --blue: #4845E4;
     --pink: #ED4385;
     --light-purple: #F2F0FF;
-    --light-gray-background: #F2F0FF;
+    --light-gray-background: #F3F6F9;
     --grey-text: #7A7A7A;
     --black-standard-text: #0C0C0C;
 
@@ -36,7 +36,12 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     color: var(--black-standard-text);
+}
+
+html, body {
+    height: 100%;
 }
 
 
@@ -45,11 +50,57 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Merriweather', serif;
 }
 
-.container-header {
-    color: var(--light-purple);
+h1 {
+    font-size: 2rem;
+    font-weight: 500;
 }
 
+h2 {
+    font-size: 1rem;
+    font-weight: 500;
+}
 
+.case-study p {
+    font-size: 0.75rem;
+    font-weight: 350;
+}
+
+.quote-header {
+    font-weight: 200;
+}
+
+header {
+    background: rgb(72, 69, 228);
+    background: linear-gradient(158deg, rgba(72, 69, 228, 1) 36%, rgba(87, 34, 205, 1) 77%);
+}
+
+.hero {
+    font-family: 'Merriweather', serif;
+    color: var(--purple);
+}
+
+.hero-content {
+    line-height: 1.5;
+}
+
+.hero-small-text {
+    font-family: 'Roboto', serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--black-standard-text);
+}
+
+a {
+    color: var(--purple);
+}
+
+.case-study a {
+    text-transform: uppercase;
+    font-size: 0.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 nav ul {
@@ -60,30 +111,123 @@ nav ul {
     justify-content: flex-end;
     align-items: center;
     gap: 3rem;
+    font-size: 0.75rem;
 }
 
 .container-header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 500px;
+    height: 60vh;
+    padding-top: 10%;
+    gap: 1rem;
+    text-align: center;
+    color: var(--light-purple);
+
 }
 
 .header-line {
-    justify-self: flex-end;
+    margin-top: auto;
 }
 
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    min-height: 50vh;
+    background-color: var(--light-purple);
+    padding: 3rem 0;
+}
+
+.hero-content {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    width: 30%;
+    margin: 0 auto;
+}
+
+.case-study {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-gray-background);
+}
+
+.outer-container-case-study {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 100px;
+    padding: 3rem 2rem;
+}
+
+.outer-container-case-study:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.inner-container-case-study {
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 100%;
+}
+
+.image-wrapper {
+    flex-basis: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.case-study-squiggle {
+    width: 2rem;
+}
+
+.services-container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem; /* Ruimte tussen de blokken */
+    margin: 2rem 3rem;
+    justify-items: center;
+    max-width: 1000px;
+}
+
+.services-block {
+    border: 1px solid var(--purple);
+    aspect-ratio: 1;
+    width: 300px;
+    height: 300px;
+
+
+}
+
+
 /* --------------- 3.1 Reusables ----------------------- */
-button {
+.button-header {
     background-color: var(--pink);
     color: var(--light-purple);
+    font-size: 0.5rem;
+    text-transform: uppercase;
     border: none;
-    border-radius: 15px;
-    width: fit-content;
-    padding: 10px;
+    border-radius: 20px;
+    width: auto;
+    padding: 12px 20px;
 }
+
 /* --------------- 3.2 Other --------------------------- */
+.service-icon {
+    height: 40px;
+}
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
@@ -97,12 +241,8 @@ nav ul {
 }
 
 .header-line {
-    height: 100px;
+    height: 5rem;
 }
-
-
-
-
 
 
 /* --------------- 4.2 Introduction ------------------- */
