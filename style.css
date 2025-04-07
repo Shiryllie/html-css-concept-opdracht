@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*////////////////////////
+
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+/*use var() to access*/
+:root {
+    --purple: #5722CD;
+    --blue: #4845E4;
+    --pink: #ED4385;
+    --light-purple: #F2F0FF;
+    --light-gray-background: #F2F0FF;
+    --grey-text: #7A7A7A;
+    --black-standard-text: #0C0C0C;
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--black-standard-text);
+}
+
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
+
+.container-header {
+    color: var(--light-purple);
+}
+
+
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 1rem 2rem 0 0;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3rem;
+}
+
+.container-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.header-line {
+    justify-self: flex-end;
+}
+
+/* --------------- 3.1 Reusables ----------------------- */
+button {
+    background-color: var(--pink);
+    color: var(--light-purple);
+    border: none;
+    border-radius: 15px;
+    width: fit-content;
+    padding: 10px;
+}
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+header {
+    background-color: var(--purple);
+}
+
+nav ul {
+    color: var(--light-purple);
+}
+
+.header-line {
+    height: 100px;
+}
+
+
+
+
+
+
+/* --------------- 4.2 Introduction ------------------- */
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
