@@ -133,18 +133,19 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    padding: 1rem 0;
-    width: 100%;
-
+    padding: 1rem;
 
 }
 
 nav ul {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     list-style: none;
     align-items: center;
     font-size: 0.75rem;
+    gap: 1rem;
+
 }
 
 .container-header {
@@ -203,7 +204,7 @@ nav ul {
 
 .inner-container-case-study {
     flex-basis: 400px;
-    flex-shrink: 0;
+    flex-shrink: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -350,7 +351,58 @@ nav ul {
 /* --------------- 4.2 Introduction ------------------- */
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 700px) {
+    nav {
+        justify-content: space-around;
+        font-weight: bold;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    nav ul {
+        width: 100%;
+    }
+
+    .hero {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .hero-small-text {
+        font-size: 1rem;
+    }
+
+    .outer-container-case-study {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;
+        padding: 1rem 1rem;
+
+    }
+
+    .outer-container-case-study:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .inner-container-case-study {
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 2rem 0 1rem 0;
+
+
+    }
+
+    .image-wrapper {
+        flex-basis: 100%;
+    }
+
+    .services-container {
+        padding: 3rem 0 2rem 0;
+    }
 
 
 }
